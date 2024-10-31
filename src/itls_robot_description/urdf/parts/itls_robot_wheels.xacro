@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot name="itls_robot"
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!--Wheels Constants-->
+  <xacro:property name="wheel_radius" value="0.14"/>
+  <xacro:property name="wheel_width" value="0.2"/>
+  <xacro:property name="wheel_ygap" value="0.07"/>
+  <xacro:property name="wheel_zoff" value="0.0"/>
+  <xacro:property name="wheel_xoff" value="-0.16"/>
+
+  <!-- keep in mind if there is problem in slippery between Gazebo and RVIZ 
+  you can change the collision gemetry of the wheels into sphere without toaching the visuals
+  Last time I checked the rotation it is pretty good no need -->
+
+  <!-- Wheels Xacro and instances -->
+  <xacro:macro name="wheel" params="prefix x_reflect y_reflect fixedOrCont">
+    <link name="${prefix}_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+        <material name="Black">
+          <color rgba="0 0 0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="${pi/2} 0 0"/>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
+        </geometry>
+      </collision>
+      <xacro:cylinder_inertia m="50" r="${wheel_radius}" h="${wheel_width}"/>
+    </link>
+    <joint name="${prefix}_joint" type="${fixedOrCont}">
+      <parent link="base_link"/>
+      <child link="${prefix}_link"/>
+      <origin xyz="${x_reflect*(wheel_xoff + (base_length_actual/2))} ${y_reflect*(base_width/2+wheel_ygap)} ${wheel_zoff}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+  </xacro:macro>
+  <xacro:wheel fixedOrCont="continuous" prefix="frontwhl_l" x_reflect="1" y_reflect="1" />
+  <xacro:wheel fixedOrCont="continuous" prefix="frontwhl_r" x_reflect="1" y_reflect="-1" />
+  <xacro:wheel fixedOrCont="continuous" prefix="rearwhl_l" x_reflect="-1" y_reflect="1" />
+  <xacro:wheel fixedOrCont="continuous" prefix="rearwhl_r" x_reflect="-1" y_reflect="-1" />
+
+</robot>

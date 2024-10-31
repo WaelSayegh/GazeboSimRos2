@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot name="itls_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- This is used as main xacro for combining different xacros --> 
+  <!-- For clean version use itls_robot_clean.urdf.xacro -->
+  <xacro:include filename="itls_inertial_fns.xacro"/>
+  <xacro:include filename="itls_robot_base.xacro"/>
+  <xacro:include filename="itls_robot_wheels.xacro"/>
+  <xacro:include filename="sensors.xacro"/>
+  <!-- <xacro:include filename="itls_gazebo.xacro"/> -->
+
+</robot>

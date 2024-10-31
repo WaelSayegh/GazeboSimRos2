@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<robot name="itls_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  
+  <!--Gazebo Colors Editing-->
+  <gazebo reference="robot_center">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference="frontwhl_l_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="frontwhl_r_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="rearwhl_l_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference="rearwhl_r_link">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  <!-- <gazebo reference="lidar_link">
+    <material>Gazebo/Black</material>
+  </gazebo> -->
+  
+<!--WORKING DIFF DRIVE NO FRICTION FOR WHEELS REAR-->
+<!-- <gazebo>
+    <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>cmd_vel:=/cmd_vel</remapping>
+      </ros>
+      <left_joint>frontwhl_l_link</left_joint>
+      <right_joint>frontwhl_r_link</right_joint>
+      <wheel_separation>1.3005</wheel_separation>
+      <wheel_diameter>0.28</wheel_diameter>
+      <max_wheel_torque>20</max_wheel_torque>
+      <max_wheel_acceleration>1.0</max_wheel_acceleration>
+      <odometry_frame>odom</odometry_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <publish_odom>true</publish_odom>
+      <publish_odom_tf>true</publish_odom_tf>
+      <publish_wheel_tf>true</publish_wheel_tf>
+    </plugin> 
+  </gazebo>-->
+
+</robot>

@@ -1,0 +1,47 @@
+/**:
+  ros__parameters:
+    static_transforms:
+      [
+        base_link_T_lidar_front_broadcaster,
+        base_link_T_lidar_rear_broadcaster,
+        base_link_T_front_camera_link_broadcaster,
+      ]
+    base_link_T_lidar_rear_broadcaster:
+      frame_id: "base_link"
+      child_frame_id: "lidar_rear"
+      transform:
+        translation:
+          x: -1.28 
+          y: -0.85
+          z: 0.039
+        rotation_deg:
+          r: 180.0
+          p: 0.0
+          y: 145.0
+      euler_sequence: "eulerRPY"
+    base_link_T_lidar_front_broadcaster:
+      frame_id: "base_link"
+      child_frame_id: "lidar_front"
+      transform:
+        translation:
+          x: 1.36 
+          y: 0.835
+          z: 0.023
+        rotation_deg:
+          r: 180.0
+          p: 0.0
+          y: -35.0
+      euler_sequence: "eulerRPY"
+    base_link_T_front_camera_link_broadcaster:
+      frame_id: "base_link"
+      child_frame_id: "camera"
+      transform:
+        translation:
+          x: 0.15 
+          y: 0.63
+          z: 1.55
+        rotation_deg:
+          r: 0.0
+          p: 14.0
+          y: 0.0
+      euler_sequence: "eulerRPY"
