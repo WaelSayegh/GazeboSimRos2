@@ -6,7 +6,7 @@
   <xacro:include filename="itls_inertial_fns.xacro"/>
   <xacro:include filename="itls_robot_base.xacro"/>
   <xacro:include filename="itls_robot_wheels.xacro"/>
-  <xacro:include filename="sensors.xacro"/>
-  <!-- <xacro:include filename="itls_gazebo.xacro"/> -->
-
+  <xacro:include filename="itls_scanners.xacro"/>
+  <xacro:include filename="itls_gazebo.xacro"/>
+  
 </robot>

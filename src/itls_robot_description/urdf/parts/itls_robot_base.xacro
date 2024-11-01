@@ -58,7 +58,7 @@
   <!-- Robot Footprint -->
 
   <link name="base_footprint"/>
-  <joint name="base_joint" type="fixed">
+  <joint name="base_link_T_base_footprint" type="fixed">
     <parent link="base_link"/>
     <child link="base_footprint"/>
     <origin xyz="0.0 0.0 ${-wheel_radius}" rpy="0 0 0"/>
