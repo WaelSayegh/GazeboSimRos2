@@ -9,6 +9,7 @@
     <plugin name='gz::sim::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
     <plugin name='gz::sim::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
     <plugin name='gz::sim::systems::Contact' filename='ignition-gazebo-contact-system'/>
+    <plugin name='gz::sim::systems::Sensors' filename='ignition-gazebo-sensors-system'/>
     <gravity>0 0 -9.8</gravity>
     <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
     <atmosphere type='adiabatic'/>
@@ -114,7 +115,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1'>
-      <pose>2.86 1.4 0.5 0 -0 0</pose>
+      <pose>2.86 1.58 0.5 0 -0 0</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -246,7 +247,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1_1'>
-      <pose>3.53 1.4 0.5 0 -0 0</pose>
+      <pose>3.53 1.58 0.5 0 -0 0</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -290,7 +291,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1_2'>
-      <pose>4.48 1.4 0.5 0 -0 0</pose>
+      <pose>4.48 1.58 0.5 0 -0 0</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -334,7 +335,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1_3'>
-      <pose>5.42 1.4 0.5 0 -0 0</pose>
+      <pose>5.42 1.58 0.5 0 -0 0</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -466,7 +467,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1_6'>
-      <pose>6.39 1.4 0.5 0 -0 0</pose>
+      <pose>6.39 1.58 0.5 0 -0 0</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -642,7 +643,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1_4_4'>
-      <pose>7.38 1.4 0.5 0 -0 0</pose>
+      <pose>7.38 1.58 0.5 0 -0 0</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
@@ -686,7 +687,7 @@
       <self_collide>false</self_collide>
     </model>
     <model name='box_1_4_5'>
-      <pose>8.39 1.4 0.5 0 -0 0</pose>
+      <pose>8.39 1.58 0.5 0 -0 0</pose>
       <link name='box_link'>
         <inertial>
           <inertia>
