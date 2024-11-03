@@ -59,8 +59,5 @@ def generate_launch_description():
         robot_state_publisher_node,
         gz_sim,
         gz_spawner,
-        gz_bridge
-        # bridge,
-        # robot_state_publisher,
-        # rviz
+        gz_bridge,
     ])

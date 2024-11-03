@@ -14,7 +14,7 @@
       <min_linear_acceleration>-100</min_linear_acceleration>
       <max_linear_velocity>100</max_linear_velocity>
       <min_linear_velocity>-100</min_linear_velocity>
-      <!-- Input -->
+      <!-- Input Topic -->
       <topic>cmd_vel</topic>
       <!-- Output -->
       <frame_id>odom</frame_id>
@@ -27,6 +27,7 @@
       <topic>joint_states</topic>
       <joint_name>base_link_T_rearwhl_l</joint_name>
       <joint_name>base_link_T_rearwhl_r</joint_name>
+      <joint_name>caster_wheel_joint</joint_name>
     </plugin>
   </gazebo>
 
