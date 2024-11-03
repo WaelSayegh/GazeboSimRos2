@@ -9,10 +9,6 @@
   <xacro:property name="wheel_zoff" value="0.0"/>
   <xacro:property name="wheel_xoff" value="-0.5"/>
 
-  <!-- keep in mind if there is problem in slippery between Gazebo and RVIZ 
-  we can change the collision gemetry of the wheels into sphere without toaching the visuals
-  Last time I checked the rotation it is pretty good no need -->
-
   <!-- Wheels Xacro and instances -->
   <xacro:macro name="wheel" params="prefix x_reflect y_reflect fixedOrCont">
     <link name="${prefix}_link">
@@ -46,7 +42,7 @@
   <xacro:wheel fixedOrCont="continuous" prefix="rearwhl_r" x_reflect="-1" y_reflect="-1" />
 
 
-  <joint name="caster_wheel_joint" type="fixed">
+  <joint name="caster_wheel_joint" type="continuous">
     <parent link="base_link"/>
     <child link="caster_wheel"/>
     <origin xyz="1.2 0 0"/>
@@ -57,7 +53,9 @@
       <geometry>
         <sphere radius="${wheel_radius}"/>
       </geometry>
-      <material name="black"/>
+      <material name="Black">
+        <color rgba="0 0 0 1"/>
+      </material>
     </visual>
     <collision>
       <geometry>
@@ -69,10 +67,10 @@
     </xacro:inertial_sphere>
   </link>
 
-  <gazebo reference="caster_wheel">
+  <!-- <gazebo reference="caster_wheel">
     <material>Gazebo/Black</material>
-    <mu1 value="0.001"/>
-    <mu2 value="0.001"/>
-  </gazebo>
+    <mu1 value="0.1"/>
+    <mu2 value="0.1"/>
+  </gazebo> -->
 
 </robot>
