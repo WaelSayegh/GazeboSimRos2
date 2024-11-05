@@ -7,7 +7,14 @@
 
 # gz topic for simulating laser scan front
 - ros_topic_name: "/robot_interface/micro_scan_front/laser_scan"
-  gz_topic_name: "/scan"
+  gz_topic_name: "/scan_front"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+
+# gz topic for simulating laser scan rear
+- ros_topic_name: "/robot_interface/micro_scan_rear/laser_scan"
+  gz_topic_name: "/scan_rear"
   ros_type_name: "sensor_msgs/msg/LaserScan"
   gz_type_name: "gz.msgs.LaserScan"
   direction: GZ_TO_ROS

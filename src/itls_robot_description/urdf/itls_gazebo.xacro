@@ -7,7 +7,7 @@
       <!-- Wheel info -->
       <left_joint>base_link_T_rearwhl_l</left_joint>
       <right_joint>base_link_T_rearwhl_r</right_joint>
-      <wheel_separation>1.3005</wheel_separation>
+      <wheel_separation>1.4505</wheel_separation>
       <wheel_radius>0.14</wheel_radius>
       <!-- Limits -->
       <max_linear_acceleration>100</max_linear_acceleration>
