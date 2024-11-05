@@ -9,6 +9,7 @@
   <xacro:property name="wheel_radius" value="0.14"/>
   <xacro:property name="base_length_actual" value="2.64"/>
   <xacro:property name="base_link_to_lidar_rear" value="-1.28"/>
+  <xacro:property name="base_mass" value="100"/>
 
   <!-- Robot Base -->
 
@@ -30,7 +31,7 @@
         <box size="${base_length_actual} ${base_width} ${base_height}"/>
       </geometry>
     </collision>
-    <xacro:box_inertia m="10" w="${base_width}" d="${base_length}" h="${base_height}"/>
+    <xacro:box_inertia m="${base_mass}" w="${base_width}" d="${base_length}" h="${base_height}"/>
   </link>
   <joint name="base_link_T_robot_center" type="fixed">
     <parent link="base_link"/>
