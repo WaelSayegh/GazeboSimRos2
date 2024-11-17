@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="container_wall">
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>/home/user/ros2_ws/src/itls_robot_description/models/container_wall/meshes/container_wall.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>/home/user/ros2_ws/src/itls_robot_description/models/container_wall/meshes/container_wall.dae</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>
