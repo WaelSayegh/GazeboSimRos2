@@ -30,7 +30,7 @@ def generate_launch_description():
     )
 
     # Setup to launch the simulator and Gazebo world
-    sdf_file = PathJoinSubstitution([desc_package, 'gazebo_model', 'container.world'])
+    sdf_file = PathJoinSubstitution([desc_package, 'worlds', 'container.world'])
     gz_sim = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
             os.path.join(ros_gz_sim_package, 'launch', 'gz_sim.launch.py')),

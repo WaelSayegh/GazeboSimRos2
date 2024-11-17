@@ -13,7 +13,8 @@ ament_python_install_package(${PROJECT_NAME})
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME}/)
 install(DIRECTORY urdf DESTINATION share/${PROJECT_NAME}/)
-install(DIRECTORY gazebo_model DESTINATION share/${PROJECT_NAME}/)
+install(DIRECTORY models DESTINATION share/${PROJECT_NAME}/)
+install(DIRECTORY worlds DESTINATION share/${PROJECT_NAME}/)
 
 ament_export_dependencies(rclcpp rclpy robot_state_publisher)
 
